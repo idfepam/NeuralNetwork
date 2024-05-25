@@ -11,5 +11,5 @@ def predict_ethnicity(image_path):
     predictions = model.predict(img_array)
     return np.argmax(predictions)
 
-print(predict_ethnicity('C:/Users/sergs/Downloads/JonMajors.jpg'))
+print(predict_ethnicity('D:\Загрузки\gettyimages-1499279683-1702053345938.jpg'))
 
