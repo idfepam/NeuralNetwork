@@ -1,9 +1,16 @@
 .upload {
-    padding: 6px;
-    border: 2px solid darkgray;
-    border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	/* Вирівнювання по центру по горизонталі */
+	align-items: center;
+	/* Вирівнювання по центру по вертикалі */
+	margin-bottom: 20px;
+	width: 100%;
 }
 
-.upload_filename {
-    margin-bottom: 24px;
+.upload-button {
+	display: block;
+	/* Змінюємо тип відображення */
+	margin-left: 5%;
+	/* Вирівнювання по центру */
 }
