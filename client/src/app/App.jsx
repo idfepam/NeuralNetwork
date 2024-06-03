@@ -4,14 +4,14 @@ import './App.css';
 import { ImageInput } from '../components/imageInput/ImageInput.jsx';
 import SignIn from './signIn/SignIn.jsx';
 import SignUp from './signUp/SignUp.jsx';
+import About from './about/About.jsx';
 
 const Header = () => (
   <header className="header">
     <div className="logo">EthnoVisionAI</div>
     <nav className="nav">
       <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/pricing">Pricing</Link>
+      <Link to="/about">About/Pricing</Link>
       <Link to="/signin">Sign In</Link>
     </nav>
   </header>
@@ -84,6 +84,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>
