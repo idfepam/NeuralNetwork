@@ -1,8 +1,7 @@
-// About.jsx
 import React from 'react';
 import './About.css';
 
-const About = () => {
+export const About = () => {
   return (
     <div className="about-container">
       <div className="story">
@@ -33,5 +32,3 @@ const About = () => {
     </div>
   );
 };
-
-export default About;

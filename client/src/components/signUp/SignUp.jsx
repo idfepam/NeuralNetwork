@@ -1,21 +1,24 @@
-// SignIn.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './SignIn.css';
+import './SignUp.css';
 
-const SignIn = () => {
+export const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ваш код для обробки входу
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+    // tut
   };
 
   return (
-    <div className="signin-container">
-      <div className="signin-box">
-        <h1>Sign In</h1>
+    <div className="signup-container">
+      <div className="signup-box">
+        <h1>Sign Up</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email</label>
@@ -37,14 +40,19 @@ const SignIn = () => {
               required
             />
           </div>
-          <button type="submit" className="button">Sign In</button>
+          <div className="form-group">
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="button">Sign Up</button>
         </form>
-        <p>
-          Don't have an account? <Link to="/signup">Sign Up</Link>
-        </p>
       </div>
     </div>
   );
 };
-
-export default SignIn;
