@@ -1,15 +1,25 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {Link, useNavigate} from 'react-router-dom';
 import './SignIn.css';
 
-export const SignIn = () => {
+export const SignIn = ({isAuth, setIsAuth, setUser}) => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    useEffect(() => {
+        if(isAuth) {
+            navigate("/");
+        }
+    }, []);
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Ваш код для обробки входу
+        setUser({email, password});
+        setIsAuth(true);
+        navigate("/");
     };
+
 
     return (
         <div className="signin-container">

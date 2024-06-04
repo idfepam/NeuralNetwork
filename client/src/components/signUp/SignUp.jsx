@@ -1,10 +1,18 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './SignUp.css';
+import {useNavigate} from "react-router-dom";
 
-export const SignUp = () => {
+export const SignUp = ({isAuth, setIsAuth, setUser}) => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+
+    useEffect(() => {
+        if(isAuth) {
+            navigate("/");
+        }
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -12,7 +20,9 @@ export const SignUp = () => {
             alert("Passwords do not match");
             return;
         }
-        // tut
+        setUser({email, password});
+        setIsAuth(true);
+        navigate("/");
     };
 
     return (
