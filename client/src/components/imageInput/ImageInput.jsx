@@ -8,7 +8,16 @@ export const ImageInput = ({ image, setImage }) => {
 
   return (
     <div className="upload">
-      <input type="file" className="upload-button" onChange={handleImageChange} />
+      <label>
+        <div className="upload-button">
+          <div className="button">Select a file</div>
+          <div className="">
+            {image ? image.name.length >= 16 ? image.name.substring(0, 13) + '...' : image.name : 'No file selected'}
+          </div>
+        </div>
+        <input type="file" onChange={handleImageChange} accept="image/*" hidden/>
+      </label>
+
     </div>
   );
 };

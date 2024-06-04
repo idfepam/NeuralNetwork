@@ -5,3 +5,5 @@ export {About} from './about/About.jsx';
 export {Header} from './header/Header.jsx';
 export {Home} from './home/Home.jsx';
 export {FileUploadBlock} from './fileUploadBlock/FileUploadBlock.jsx';
+export {HistoryCard} from "./historyCard/HistoryCard.jsx";
+export {PredictionHistoryBlock} from "./predictionHistoryBlock/PredictionHistoryBlock.jsx";
