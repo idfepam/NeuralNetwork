@@ -79,7 +79,7 @@ async def predict(file: UploadFile = File(...)):
 
 @app.get("/history")
 async def get_history():
-    history = list(collection.find({}, {"_id": 0}).limit(10))
+    history = list(collection.find({}, {"_id": 0}).sort("timestamp", -1).limit(4))
     return JSONResponse(content=history, status_code=200)
 
 

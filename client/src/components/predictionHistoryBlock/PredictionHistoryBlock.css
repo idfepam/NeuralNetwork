@@ -1,0 +1,10 @@
+.prediction-history-block {
+    margin-top: 50px;
+}
+
+.prediction-history-items {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

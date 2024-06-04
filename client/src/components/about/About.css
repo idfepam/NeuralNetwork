@@ -1,8 +1,4 @@
-/* About.css */
 .about-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
 	padding: 40px;
 	background-color: #f4f4f9;
 }
@@ -25,7 +21,13 @@
 	margin-bottom: 20px;
 }
 
+.pricing-items {
+	display: flex;
+	justify-content: space-between;
+}
+
 .pricing-card {
+	width: 30%;
 	background: white;
 	padding: 20px;
 	border-radius: 8px;
@@ -71,22 +73,50 @@
 	color: #0056b3;
 }
 
+.story {
+	width: 50%;
+	margin-top: 50px;
+	text-align: justify;
+}
+
 .button-wrapper {
 	margin-top: 40px;
 }
 
-.button {
-	padding: 10px 20px;
+.payment {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #f2f2f7;
+	border: 2px solid gray;
+	padding: 40px;
 	border-radius: 8px;
-	border: none;
-	font-size: 16px;
-	cursor: pointer;
-	background: #007bff;
-	color: white;
-	transition: all 0.3s ease;
+	z-index: 10;
 }
 
-.button:hover {
-	background: #0056b3;
-	transition: all 0.3s ease;
+.payment-close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	cursor: pointer;
 }
+
+.payment form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.payment form label{
+	margin-top: 10px;
+}
+.payment form input{
+	border: none;
+	border-bottom: 1px solid gray;
+	margin-top: 10px;
+	padding: 10px;
+	width: 300px;
+	font-size: 16px;
+}
+

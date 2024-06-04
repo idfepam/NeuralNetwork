@@ -1,0 +1,40 @@
+.file-upload-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.file-upload-block h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.file-upload-block p {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.result {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.result h3 {
+    margin-bottom: 10px;
+}
+
+.result p {
+    margin: 0;
+    font-size: 18px;
+}

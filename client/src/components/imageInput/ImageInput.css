@@ -1,16 +1,24 @@
 .upload {
 	display: flex;
 	justify-content: center;
-	/* Вирівнювання по центру по горизонталі */
 	align-items: center;
-	/* Вирівнювання по центру по вертикалі */
 	margin-bottom: 20px;
 	width: 100%;
 }
 
 .upload-button {
-	display: block;
-	/* Змінюємо тип відображення */
-	margin-left: 5%;
-	/* Вирівнювання по центру */
+	display: flex;
+	justify-content: space-between;
+	background: #f2f2f7;
+	border-radius: 5px;
+}
+
+.upload-button div {
+	padding: 10px;
+	border-radius: 5px 0 0 5px;
+}
+
+.upload-button .button {
+	width: auto;
+	margin-top: 0;
 }
