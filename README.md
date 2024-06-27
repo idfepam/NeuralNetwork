@@ -1,6 +1,3 @@
-Here is the updated `README.md` file, styled similarly to the example provided:
-
-```markdown
 # Neural Network Ethnicity Recognition
 
 Neural Network Ethnicity Recognition is a project designed to identify the ethnicity of individuals based on image recognition using a neural network.
@@ -28,6 +25,7 @@ Neural Network Ethnicity Recognition is a project designed to identify the ethni
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
+- [Visualizations](#visualizations)
 
 ## Project Overview
 
@@ -79,46 +77,58 @@ NEURALNETWORK/
 
 ### Backend Setup
 
-1. Create a virtual environment and activate it:
+1. **Create a virtual environment:**
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+    ```bash
+    python -m venv venv
+    ```
 
-2. Install the required Python packages:
+2. **Activate the virtual environment:**
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+    - On Windows:
+      ```bash
+      .\venv\Scripts\activate
+      ```
+    - On macOS/Linux:
+      ```bash
+      source venv/bin/activate
+      ```
 
-3. Set up MongoDB and ensure it is running. Update the MongoDB URI in the `.env` file.
+3. **Install backend dependencies:**
 
-4. Run the FastAPI server:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-   ```bash
-   uvicorn main:app --reload
-   ```
+4. **Configure MongoDB:**
+
+    Update the `.env` file with your MongoDB URI.
+
+5. **Run the FastAPI server:**
+
+    ```bash
+    uvicorn main:app --reload
+    ```
 
 ### Frontend Setup
 
-1. Navigate to the `client` directory:
+1. **Navigate to the frontend directory:**
 
-   ```bash
-   cd client
-   ```
+    ```bash
+    cd client
+    ```
 
-2. Install the necessary npm packages:
+2. **Install frontend dependencies:**
 
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
-3. Start the React development server:
+3. **Start the React development server:**
 
-   ```bash
-   npm run dev
-   ```
+    ```bash
+    npm run dev
+    ```
 
 ## Usage
 
@@ -126,9 +136,9 @@ NEURALNETWORK/
 
 To predict the ethnicity of an individual from an image:
 
-1. Upload an image using the frontend interface.
-2. The image will be processed by the FastAPI backend and the ethnicity will be predicted using the TensorFlow model.
-3. The result will be displayed on the frontend.
+1. **Upload an image using the frontend interface.**
+2. **The image will be processed by the FastAPI backend and the ethnicity will be predicted using the TensorFlow model.**
+3. **The result will be displayed on the frontend.**
 
 ### Viewing History
 
@@ -148,20 +158,20 @@ You can view the history of previous predictions through the `/history` endpoint
 
 ### Adding New Features
 
-1. Fork the repository.
-2. Create a new branch for your feature.
-3. Make your changes.
-4. Submit a pull request.
+1. **Fork the repository.**
+2. **Create a new branch for your feature.**
+3. **Make your changes.**
+4. **Submit a pull request.**
 
 ## Contributing
 
 Contributions are welcome! Please follow the standard GitHub flow:
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Push to your branch.
-5. Submit a pull request.
+1. **Fork the repository.**
+2. **Create a feature branch.**
+3. **Commit your changes.**
+4. **Push to your branch.**
+5. **Submit a pull request.**
 
 ## License
 
@@ -172,6 +182,19 @@ This project is licensed under the MIT License.
 - TensorFlow for the machine learning framework.
 - FastAPI for the web framework.
 - React.js for the frontend framework.
-```
 
-This `README.md` file now includes a table of contents and follows the structure and style similar to the example you provided.
+## Visualizations
+
+### Model Accuracy and Loss
+The following graphs depict the training and validation accuracy and loss of the model over epochs. The accuracy graph shows how well the model is learning to classify images correctly, while the loss graph shows the error in the model's predictions.
+![performance](https://github.com/idfepam/NeuralNetwork/assets/105879784/69e648a9-39b1-4e1f-bba1-ab96028ee4ce)
+
+### PCA on Test Set
+The PCA plot visualizes the distribution of the test set in two principal components. Each point represents an image, and its color indicates its true ethnicity class. This plot helps in understanding the separability of different classes in a lower-dimensional space.
+![population_pca](https://github.com/idfepam/NeuralNetwork/assets/105879784/b683e6bc-26b2-4ca6-9bb3-f56e6d71dc43)
+
+### Confusion Matrix
+The confusion matrix shows the performance of the classification model on the test set. Each row represents the true class, and each column represents the predicted class. The diagonal elements indicate the number of correct predictions for each class.
+![confusion_matrix](https://github.com/idfepam/NeuralNetwork/assets/105879784/42c43c9f-6c43-4a77-b8b5-0cbc47633380)
+
+```
